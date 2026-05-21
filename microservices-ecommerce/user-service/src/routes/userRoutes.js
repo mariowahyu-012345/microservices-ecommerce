@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const UserController = require('../controllers/userController');
+const userController = require('../controllers/userController');
 
-router.get('/', UserController.getAllUsers);
-router.get('/:id', UserController.getUserById);
-router.post('/register', UserController.registerUser); // Diuji lewat API Gateway nanti
+router.get('/', userController.getAllUsers); // <-- Menampilkan semua user
+router.get('/:id', userController.getUserById);
+router.post('/register', userController.registerUser);
 
 module.exports = router;
